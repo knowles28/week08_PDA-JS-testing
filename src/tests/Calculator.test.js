@@ -25,6 +25,8 @@ describe('Calculator', () => {
     const equalsOperator = container.getByTestId('operator-equals');
     fireEvent.click(equalsOperator);
     const runningTotal = container.getByTestId('running-total');   
+    expect(runningTotal.textContent).toEqual('5');
+
   })
 
   it('should subtract 4 from 7 and get 3', () => {
